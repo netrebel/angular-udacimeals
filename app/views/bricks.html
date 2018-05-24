@@ -1,11 +1,21 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4" ng-repeat="item in bricks.items">
     <h2>Brick status</h2>
     <ul>
-      <li id="brick-color">Color: {{brick.color}}</li>
-      <li id="brick-size">Size: {{brick.size}}</li>
-      <li id="brick-price">Price: {{brick.price}}</li>
-      <li id="brick-quantity">Quantity: {{brick.quantity}}</li>
+      <li id="brick-color">Color: {{item.color}}</li>
+      <li id="brick-size">Size: {{item.size}}</li>
+      <li id="brick-price">Price: {{item.price}}</li>
+      <li id="brick-quantity">Quantity: {{item.quantity}} <span ng-class="{highlight: item.quantity < 100}" ng-if="item.quantity < 100"> - Very few left!</span></li>
+      <li id="brick-rating">Rating: {{item.rating}} <button ng-click="bricks.increment(item)">+</button> <button ng-click="bricks.decrement(item)">-</button> </li>
+
+      <img ng-src="images/{{item.img}}" alt="{{item.name}}">
+      <p>
+        <textarea ng-model="item.newReview" name="item.review" rows="3" cols="25"></textarea>
+      </p>
+      <p>
+        {{item.newReview}}
+        <span ng-if="!item.newReview">Why not write a review!</span>
+      </p>
     </ul>
   </div>
 </div>
