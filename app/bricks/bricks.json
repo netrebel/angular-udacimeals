@@ -1,0 +1,23 @@
+[
+  {
+    "color": "Green",
+    "size": "Size: 2 x 6",
+    "price": "$0.03",
+    "quantity": 697,
+    "rating": 5
+  },
+  {
+    "color": "Red",
+    "size": "Size: 2 x 6",
+    "price": "$0.03",
+    "quantity": 10,
+    "rating": 2
+  },
+  {
+    "color": "Yellow",
+    "size": "Size: 2 x 6",
+    "price": "$0.03",
+    "quantity": 300,
+    "rating": 1
+  }
+]
